@@ -3,7 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Phone Finder - تحميل التطبيق</title> 
+  <title>تحميل تطبيق Phone Finder</title> 
+
+  <!-- SEO -->
+  <meta name="description" content="سجل جهازك برقم IMEI، وتتبع حالته في حال الفقدان أو السرقة.">
+  <meta property="og:title" content="تحميل تطبيق Phone Finder" />
+  <meta property="og:description" content="تطبيق يساعدك في تتبع جهازك باستخدام IMEI والتنبيه في حال فقدانه." />
+  <meta property="og:image" content="assets/og-image.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ar_AR" />
+
   <style>
     :root {
       --primary: #28a745;
@@ -28,12 +37,21 @@
       max-width: 960px;
       margin: auto;
       padding: 40px 20px;
+    }
+
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      margin-bottom: 60px;
       text-align: center;
     }
 
-    h1 {
+    .hero-text h1 {
       font-size: 2.5rem;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
     }
 
     .subtitle {
@@ -61,12 +79,55 @@
       transform: translateY(-2px);
     }
 
+    .hero img {
+      max-width: 280px;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    }
+
+    .features {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      margin-bottom: 40px;
+    }
+
+    .features h2, .screenshots h2, .contact-info h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 1.8rem;
+    }
+
+    .features ul {
+      list-style: none;
+      padding: 0;
+      font-size: 1.1rem;
+    }
+
+    .features li {
+      margin: 12px 0;
+      text-align: right;
+      padding-right: 20px;
+      position: relative;
+    }
+
+    .features li::before {
+      content: '✅';
+      position: absolute;
+      right: 0;
+    }
+
     .screenshots {
+      margin: 40px 0;
+      text-align: center;
+    }
+
+    .screenshots-grid {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 16px;
-      margin: 40px 0;
     }
 
     .screenshots img {
@@ -93,6 +154,7 @@
     .contact-item {
       margin: 10px 0;
       font-size: 1.1rem;
+      text-align: center;
     }
 
     .contact-item a {
@@ -109,19 +171,10 @@
     footer {
       margin-top: 50px;
       padding: 20px;
+      background-color: #eaecef;
       color: #7f8c8d;
       font-size: 0.9rem;
-      border-top: 1px solid #eee;
-    }
-
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 2rem;
-      }
-      .screenshots img {
-        width: 100%;
-        max-width: 300px;
-      }
+      text-align: center;
     }
 
     /* Lightbox */
@@ -149,38 +202,68 @@
       max-height: 90%;
       border-radius: 12px;
     }
+
+    @media (max-width: 600px) {
+      .hero-text h1 {
+        font-size: 2rem;
+      }
+      .screenshots img {
+        width: 100%;
+        max-width: 300px;
+      }
+      .hero {
+        flex-direction: column;
+      }
+    }
   </style>
 </head>
 <body>
 
   <div class="container">
-    <h1>📱 تطبيق Phone Finder</h1>
-    <p class="subtitle">
-      سجل جهازك برقم IMEI، وتابع حالته إذا فُقد أو سُرق، وساعد غيرك في استرجاع أجهزتهم.
-    </p>
-    <a class="download-btn" href="https://drive.google.com/file/d/1neihhtpWyiDf1sCjYB2v1Ph_aio9qPdj/view?usp=drive_link" target="_blank">تحميل التطبيق</a>
 
-    <div class="screenshots">
-      <img src="assets/1.png" alt="صورة شاشة 1">
-      <img src="assets/2.png" alt="صورة شاشة 2">
-      <img src="assets/3.png" alt="صورة شاشة 3">
-      <img src="assets/4.png" alt="صورة شاشة 4">
-      <img src="assets/5.png" alt="صورة شاشة 5">
+    <!-- Hero Section -->
+    <div class="hero">
+      <div class="hero-text">
+        <h1>📱 تطبيق Phone Finder</h1>
+        <p class="subtitle">سجل جهازك برقم IMEI، وتابع حالته إذا فُقد أو سُرق، وساعد غيرك في استرجاع أجهزتهم.</p>
+        <a class="download-btn" href="https://drive.google.com/file/d/1neihhtpWyiDf1sCjYB2v1Ph_aio9qPdj/view?usp=drive_link" target="_blank">📥 تحميل التطبيق</a>
+      </div>
+      <img src="assets/mockup.png" alt="عرض التطبيق">
     </div>
 
+    <!-- Features Section -->
+    <div class="features">
+      <h2>✨ مميزات التطبيق</h2>
+      <ul>
+        <li>تتبع الهاتف باستخدام رقم IMEI</li>
+        <li>تنبيهات لحظية عند فقدان أو سرقة الجهاز</li>
+        <li>مساعدة في استرجاع أجهزة الآخرين</li>
+        <li>سهولة الاستخدام بواجهة عربية</li>
+        <li> دعم فني مباشر عبر واتساب</li>
+      </ul>
+    </div>
+
+    <!-- Screenshots Section -->
+    <div class="screenshots">
+      <h2>📸 لقطات من التطبيق</h2>
+      <div class="screenshots-grid">
+        <img src="assets/1.png" alt="صورة شاشة 1">
+        <img src="assets/2.png" alt="صورة شاشة 2">
+        <img src="assets/3.png" alt="صورة شاشة 3">
+        <img src="assets/4.png" alt="صورة شاشة 4">
+        <img src="assets/5.png" alt="صورة شاشة 5">
+      </div>
+    </div>
+
+    <!-- Contact Section -->
     <div class="contact-info">
       <h2>تواصل مع المطور</h2>
-      <div class="contact-item">
-        📩 Email: <a href="mailto:dev.khaledtarek@gmail.com">dev.khaledtarek@gmail.com</a>
-      </div>
-      <div class="contact-item">
-        🔗 LinkedIn: <a href="https://www.linkedin.com/in/khaled-tarek-675632241" target="_blank">Khaled Tarek</a>
-      </div>
-      <div class="contact-item">
-        💬 WhatsApp: <a href="https://wa.me/201273793869" target="_blank">+201273793869</a>
-      </div>
+      <div class="contact-item">📩 البريد: <a href="mailto:dev.khaledtarek@gmail.com">dev.khaledtarek@gmail.com</a></div>
+      <div class="contact-item">🔗 لينكد إن: <a href="https://www.linkedin.com/in/khaled-tarek-675632241" target="_blank">Khaled Tarek</a></div>
+      <div class="contact-item">💬 واتساب: <a href="https://wa.me/201273793869" target="_blank">+201273793869</a></div>
     </div>
 
+    <!-- Footer -->
     <footer>
       © 2025 Phone Finder — تم التطوير بواسطة خالد طارق
     </footer>
