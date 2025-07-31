@@ -6,12 +6,13 @@
   <title>Find My Phone - تحميل التطبيق</title>
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f9f9f9;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f7fa;
       margin: 0;
       padding: 0;
       text-align: center;
       direction: rtl;
+      color: #333;
     }
     .container {
       padding: 40px 20px;
@@ -19,42 +20,93 @@
       margin: auto;
     }
     h1 {
-      font-size: 32px;
-      color: #333;
+      font-size: 2.5rem;
+      color: #2c3e50;
+      margin-bottom: 20px;
     }
-    p {
+    .subtitle {
+      font-size: 1.2rem;
       color: #555;
-      font-size: 18px;
+      margin-bottom: 30px;
+      line-height: 1.6;
     }
     a.download-btn {
       display: inline-block;
       margin: 20px 0;
-      padding: 12px 24px;
+      padding: 15px 30px;
       background-color: #28a745;
       color: white;
-      font-size: 18px;
+      font-size: 1.1rem;
+      font-weight: 600;
       text-decoration: none;
       border-radius: 10px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
     a.download-btn:hover {
       background-color: #218838;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
     }
     .screenshots {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 16px;
-      margin-top: 30px;
+      gap: 20px;
+      margin: 40px 0;
     }
     .screenshots img {
       width: 250px;
-      border-radius: 10px;
-      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .screenshots img:hover {
+      transform: scale(1.03);
+    }
+    .contact-info {
+      background-color: #fff;
+      padding: 25px;
+      border-radius: 12px;
+      margin: 30px auto;
+      max-width: 600px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 15px 0;
+      font-size: 1.1rem;
+    }
+    .contact-item a {
+      color: #3498db;
+      text-decoration: none;
+      margin-right: 10px;
+      transition: color 0.3s ease;
+    }
+    .contact-item a:hover {
+      color: #2980b9;
+      text-decoration: underline;
     }
     footer {
       margin-top: 50px;
-      font-size: 14px;
-      color: #888;
+      font-size: 0.9rem;
+      color: #7f8c8d;
+      padding-top: 20px;
+      border-top: 1px solid #eee;
+    }
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+      .subtitle {
+        font-size: 1rem;
+      }
+      .contact-item {
+        font-size: 1rem;
+        flex-direction: column;
+      }
     }
   </style>
 </head>
@@ -62,7 +114,7 @@
 
   <div class="container">
     <h1>📱 تطبيق Find My Phone</h1>
-    <p>سجل جهازك برقم IMEI، وتابع حالته إذا فُقد أو سُرق، وساعد غيرك في استرجاع أجهزتهم.</p>
+    <p class="subtitle">سجل جهازك برقم IMEI، وتابع حالته إذا فُقد أو سُرق، وساعد غيرك في استرجاع أجهزتهم.</p>
     <a class="download-btn" href="https://drive.google.com/file/d/1neihhtpWyiDf1sCjYB2v1Ph_aio9qPdj/view?usp=drive_link" target="_blank">تحميل التطبيق</a>
 
     <div class="screenshots">
@@ -71,6 +123,19 @@
       <img src="assets/3.png" alt="صورة شاشة التطبيق 3">
       <img src="assets/4.png" alt="صورة شاشة التطبيق 4">
       <img src="assets/5.png" alt="صورة شاشة التطبيق 5">
+    </div>
+
+    <div class="contact-info">
+      <h2>تواصل مع المطور</h2>
+      <div class="contact-item">
+        📩 Email: <a href="mailto:dev.khaledtarek@gmail.com">dev.khaledtarek@gmail.com</a>
+      </div>
+      <div class="contact-item">
+        🔗 LinkedIn: <a href="https://www.linkedin.com/in/khaled-tarek" target="_blank">Khaled Tarek</a>
+      </div>
+      <div class="contact-item">
+        💬 WhatsApp: <a href="https://wa.me/201273793869" target="_blank">+201273793869</a>
+      </div>
     </div>
 
     <footer>
