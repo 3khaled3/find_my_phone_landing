@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>تحميل تطبيق Phone Finder</title> 
+  <title>حمّل تطبيق Phone Finder الآن</title> 
 
   <!-- SEO -->
-  <meta name="description" content="سجّل جهازك باستخدام IMEI، وراقب حالته إذا فُقد أو سُرق. تحقق من الأجهزة قبل الشراء واحصل على تنبيهات فورية.">
-  <meta property="og:title" content="تحميل تطبيق Phone Finder" />
-  <meta property="og:description" content="تطبيق يساعدك على تتبع جهازك باستخدام IMEI والتنبيه في حالة الفقدان أو السرقة." />
+  <meta name="description" content="موبايلك اتسرق؟ حمّل Phone Finder وسجّل جهازك برقم IMEI لتعرف حالته، تمنع بيعه، وتستعيده بسهولة.">
+  <meta property="og:title" content="Phone Finder - أمان موبايلك يبدأ هنا!" />
+  <meta property="og:description" content="سجّل جهازك، راقب حالته، وكشف أي حرامي يحاول يبيعه. التطبيق الأقوى لحماية هاتفك المسروق." />
   <meta property="og:image" content="assets/og-image.png" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="ar_AR" />
@@ -21,6 +21,7 @@
       --text-light: #555;
       --background: #f5f7fa;
       --white: #fff;
+      --danger: #e74c3c;
       --link: #3498db;
       --link-hover: #2980b9;
     }
@@ -40,21 +41,17 @@
     }
 
     .hero {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      gap: 30px;
-      margin-bottom: 60px;
       text-align: center;
+      margin-bottom: 50px;
     }
 
-    .hero-text h1 {
+    .hero h1 {
       font-size: 2.5rem;
-      margin-bottom: 15px;
+      color: var(--primary-dark);
+      margin-bottom: 20px;
     }
 
-    .subtitle {
+    .hero p {
       font-size: 1.2rem;
       color: var(--text-light);
       margin-bottom: 30px;
@@ -65,18 +62,39 @@
       background-color: var(--primary);
       color: white;
       padding: 14px 32px;
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       font-weight: bold;
       text-decoration: none;
       border-radius: 12px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
       transition: background-color 0.3s ease, transform 0.2s ease;
       display: inline-block;
     }
 
     .download-btn:hover {
       background-color: var(--primary-dark);
-      transform: translateY(-2px);
+      transform: scale(1.03);
+    }
+
+    .alert-section {
+      background-color: #ffe5e5;
+      border: 2px dashed var(--danger);
+      border-radius: 12px;
+      padding: 25px;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .alert-section h2 {
+      color: var(--danger);
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+    }
+
+    .alert-section p {
+      font-size: 1.1rem;
+      color: var(--danger);
+      line-height: 1.7;
     }
 
     .features {
@@ -87,10 +105,10 @@
       margin-bottom: 40px;
     }
 
-    .features h2, .screenshots h2, .contact-info h2 {
+    .features h2 {
       text-align: center;
-      margin-bottom: 20px;
       font-size: 1.8rem;
+      margin-bottom: 20px;
     }
 
     .features ul {
@@ -101,9 +119,9 @@
 
     .features li {
       margin: 12px 0;
-      text-align: right;
-      padding-right: 20px;
+      padding-right: 22px;
       position: relative;
+      text-align: right;
     }
 
     .features li::before {
@@ -113,8 +131,13 @@
     }
 
     .screenshots {
-      margin: 40px 0;
       text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .screenshots h2 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
     }
 
     .screenshots-grid {
@@ -126,7 +149,6 @@
 
     .screenshots img {
       width: 220px;
-      height: auto;
       border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       cursor: pointer;
@@ -141,25 +163,27 @@
       background: var(--white);
       border-radius: 12px;
       padding: 30px;
+      text-align: center;
       box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      margin-top: 50px;
+    }
+
+    .contact-info h2 {
+      font-size: 1.6rem;
+      margin-bottom: 10px;
     }
 
     .contact-item {
-      margin: 10px 0;
       font-size: 1.1rem;
-      text-align: center;
+      margin: 8px 0;
     }
 
     .contact-item a {
       color: var(--link);
       text-decoration: none;
-      margin-right: 8px;
     }
 
     .contact-item a:hover {
       color: var(--link-hover);
-      text-decoration: underline;
     }
 
     footer {
@@ -167,47 +191,13 @@
       padding: 20px;
       background-color: #eaecef;
       color: #7f8c8d;
-      font-size: 0.9rem;
       text-align: center;
-    }
-
-    /* Lightbox */
-    .lightbox {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0,0,0,0.8);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      visibility: hidden;
-      opacity: 0;
-      transition: all 0.3s ease;
-      z-index: 9999;
-    }
-
-    .lightbox.visible {
-      visibility: visible;
-      opacity: 1;
-    }
-
-    .lightbox img {
-      max-width: 90%;
-      max-height: 90%;
-      border-radius: 12px;
+      font-size: 0.9rem;
     }
 
     @media (max-width: 600px) {
-      .hero-text h1 {
-        font-size: 2rem;
-      }
-      .screenshots img {
-        width: 100%;
-        max-width: 300px;
-      }
-      .hero {
-        flex-direction: column;
-      }
+      .hero h1 { font-size: 2rem; }
+      .screenshots img { width: 100%; max-width: 300px; }
     }
   </style>
 </head>
@@ -217,77 +207,55 @@
 
     <!-- Hero Section -->
     <div class="hero">
-      <div class="hero-text">
-        <h1>📱 تطبيق Phone Finder</h1>
-        <p class="subtitle">سجّل جهازك برقم IMEI، وتابع حالته إذا فُقد أو سُرق، وتحقق من الأجهزة قبل الشراء.</p>
-        <a class="download-btn" href="https://drive.google.com/file/d/14aQGJaQalMx8repibiA_XZ8VO30MF26S/view?usp=drive_link" target="_blank">📥 تحميل التطبيق</a>
-      </div>
+      <h1>📱 موبايلك في أمان حتى لو اتسرق!</h1>
+      <p>سجّل موبايلك برقم IMEI وخلي أي حرامي يندم! تطبيق <strong>Phone Finder</strong> بيرجعلك حقك وبيفضح أي محاولة بيع للجهاز.</p>
+      <a class="download-btn" href="https://drive.google.com/file/d/14aQGJaQalMx8repibiA_XZ8VO30MF26S/view?usp=drive_link" target="_blank">🚀 حمّل التطبيق الآن واحمي جهازك</a>
     </div>
 
-    <!-- Features Section -->
+    <!-- Alert Section -->
+    <div class="alert-section">
+      <h2>🚨 حرامي سرق موبايلك؟</h2>
+      <p>سجّلت جهازك؟ تمام، أول ما حد يحاول يبيعه أو يبحث عنه بالـ IMEI، هيعرف إنه مسروق وهيشوف آخر موقع ظهر فيه.<br>لكن لو ما سجلتوش؟ للأسف.. راح عليك!</p>
+    </div>
+
+    <!-- Features -->
     <div class="features">
-      <h2>✨ مميزات التطبيق</h2>
+      <h2>✨ ليه تستخدم Phone Finder؟</h2>
       <ul>
-        <li>تسجيل الأجهزة باستخدام IMEI، الموديل، اللون، والحالة (آمن / مفقود).</li>
-        <li>التحقق الفوري من حالة الجهاز قبل الشراء أو البيع باستخدام IMEI.</li>
-        <li>الإبلاغ عن الأجهزة المفقودة مع إمكانية إضافة مكافأة للاسترجاع.</li>
-        <li>تتبع الجهاز ومعرفة سجل البحث والتحليلات الخاصة به.</li>
-        <li>استقبال إشعارات فورية عند البحث عن جهازك أو تغيير حالته.</li>
-        <li>إدارة حسابك، الأجهزة المسجلة، وتغيير اللغة أو كلمة المرور.</li>
-        <li>لوحة تحكم لعرض إحصائيات عن الأجهزة المفقودة والمُسترجعة.</li>
-        <li>دعم واجهة عربية وإنجليزية مع إمكانية التبديل بسهولة.</li>
-        <li>تجربة ترحيبية للمستخدمين الجدد مع خطوات إرشادية.</li>
-        <li>الوصول إلى سياسة الخصوصية والشروط من داخل التطبيق.</li>
+        <li>🔍 اعرف حالة أي موبايل باستخدام IMEI (آمن / مسروق).</li>
+        <li>🧠 سجل كامل بكل عمليات البحث اللي تمت على جهازك.</li>
+        <li>📍 الموقع التقريبي للجهاز بعد آخر عملية بحث.</li>
+        <li>📣 إشعارات فورية عند أي تغيير في حالة الجهاز.</li>
+        <li>🔒 إحمي جهازك من البيع بعد السرقة.</li>
+        <li>🛡️ واجهة بسيطة تدعم عربي وإنجليزي.</li>
+        <li>🎁 هدية ترحيبية للمستخدمين الجدد بخطوات إرشادية.</li>
       </ul>
     </div>
 
-    <!-- Screenshots Section -->
+    <!-- Screenshots -->
     <div class="screenshots">
       <h2>📸 لقطات من التطبيق</h2>
       <div class="screenshots-grid">
-        <img src="assets/1.png" alt="صورة شاشة 1">
-        <img src="assets/2.png" alt="صورة شاشة 2">
-        <img src="assets/3.png" alt="صورة شاشة 3">
-        <img src="assets/4.png" alt="صورة شاشة 4">
-        <img src="assets/5.png" alt="صورة شاشة 5">
+        <img src="assets/1.png" alt="شاشة 1">
+        <img src="assets/2.png" alt="شاشة 2">
+        <img src="assets/3.png" alt="شاشة 3">
+        <img src="assets/4.png" alt="شاشة 4">
+        <img src="assets/5.png" alt="شاشة 5">
       </div>
     </div>
 
-    <!-- Contact Section -->
+    <!-- Contact -->
     <div class="contact-info">
-      <h2>تواصل مع المطور</h2>
+      <h2>📞 تواصل معنا</h2>
       <div class="contact-item">📩 البريد: <a href="mailto:dev.khaledtarek@gmail.com">dev.khaledtarek@gmail.com</a></div>
-      <div class="contact-item">🔗 لينكد إن: <a href="https://www.linkedin.com/in/khaled-tarek-675632241" target="_blank">Khaled Tarek</a></div>
+      <div class="contact-item">🔗 لينكدإن: <a href="https://www.linkedin.com/in/khaled-tarek-675632241" target="_blank">Khaled Tarek</a></div>
       <div class="contact-item">💬 واتساب: <a href="https://wa.me/201273793869" target="_blank">+201273793869</a></div>
     </div>
 
-    <!-- Footer -->
     <footer>
       © 2025 Phone Finder — تم التطوير بواسطة خالد طارق
     </footer>
+
   </div>
-
-  <!-- Lightbox -->
-  <div class="lightbox" id="lightbox">
-    <img src="" alt="عرض الصورة">
-  </div>
-
-  <script>
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = lightbox.querySelector('img');
-
-    document.querySelectorAll('.screenshots img').forEach(img => {
-      img.addEventListener('click', () => {
-        lightbox.classList.add('visible');
-        lightboxImg.src = img.src;
-      });
-    });
-
-    lightbox.addEventListener('click', () => {
-      lightbox.classList.remove('visible');
-      lightboxImg.src = '';
-    });
-  </script>
-
 </body>
 </html>
