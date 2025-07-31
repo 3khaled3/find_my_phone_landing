@@ -159,6 +159,31 @@
       transform: scale(1.05);
     }
 
+    .lightbox {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      visibility: hidden;
+      opacity: 0;
+      transition: all 0.3s ease;
+      z-index: 9999;
+    }
+
+    .lightbox.visible {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 12px;
+    }
+
     .contact-info {
       background: var(--white);
       border-radius: 12px;
@@ -244,6 +269,11 @@
       </div>
     </div>
 
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+      <img src="" alt="عرض الصورة">
+    </div>
+
     <!-- Contact -->
     <div class="contact-info">
       <h2>📞 تواصل معنا</h2>
@@ -257,5 +287,24 @@
     </footer>
 
   </div>
+
+  <!-- JS for Lightbox -->
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = lightbox.querySelector('img');
+
+    document.querySelectorAll('.screenshots img').forEach(img => {
+      img.addEventListener('click', () => {
+        lightbox.classList.add('visible');
+        lightboxImg.src = img.src;
+      });
+    });
+
+    lightbox.addEventListener('click', () => {
+      lightbox.classList.remove('visible');
+      lightboxImg.src = '';
+    });
+  </script>
+
 </body>
 </html>
