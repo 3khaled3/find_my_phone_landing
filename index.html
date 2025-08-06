@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Phone Finder - Google Play Style</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
   <style>
@@ -14,18 +15,21 @@
       direction: rtl;
       color: #202124;
     }
+
     .app-page {
       max-width: 1000px;
       margin: auto;
       padding: 30px 20px;
       background: white;
     }
+
     .app-header {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       gap: 20px;
     }
+
     .app-icon {
       width: 100px;
       height: 100px;
@@ -34,17 +38,21 @@
       background-size: cover;
       background-position: center;
     }
+
     .app-info {
       flex: 1;
     }
+
     .app-info h1 {
       margin: 0 0 10px;
       font-size: 24px;
     }
+
     .app-info .developer {
       color: #5f6368;
       font-size: 14px;
     }
+
     .install-btn {
       background-color: #1a73e8;
       color: white;
@@ -55,49 +63,58 @@
       cursor: pointer;
       transition: background-color 0.3s;
     }
+
     .install-btn:hover {
       background-color: #0c66d4;
     }
-    .rating-section, .description, .features, .screenshots, .contact {
-      margin-top: 30px;
-    }
+
     .rating-section {
       color: #5f6368;
       font-size: 14px;
+      margin-top: 20px;
     }
+
     .description p {
       line-height: 1.7;
       font-size: 16px;
     }
+
     .features ul {
       padding-right: 20px;
       line-height: 1.8;
     }
+
     .features li::before {
       content: '✔';
       margin-left: 8px;
       color: #1a73e8;
     }
+
     .screenshots-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
       gap: 10px;
     }
+
     .screenshots-grid img {
       width: 100%;
       border-radius: 12px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
       cursor: pointer;
       transition: transform 0.2s;
     }
+
     .screenshots-grid img:hover {
       transform: scale(1.05);
     }
+
     .lightbox {
       position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0,0,0,0.8);
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -106,19 +123,23 @@
       transition: 0.3s ease;
       z-index: 9999;
     }
+
     .lightbox img {
       max-width: 90%;
       max-height: 90%;
       border-radius: 12px;
     }
+
     .lightbox.visible {
       visibility: visible;
       opacity: 1;
     }
+
     .contact a {
       color: #1a73e8;
       text-decoration: none;
     }
+
     .footer {
       text-align: center;
       margin-top: 50px;
@@ -127,85 +148,87 @@
     }
   </style>
 </head>
+
 <body>
-<div class="app-page">
-  <div class="app-header">
-    <div class="app-icon" style="background-image: url('assets/icon.png');"></div>
-    <div class="app-info">
-      <h1>Phone Finder</h1>
-      <div class="developer">تم التطوير بواسطة خالد طارق</div>
+  <div class="app-page">
+    <div class="app-header">
+      <div class="app-icon" style="background-image: url('assets/icon.png');"></div>
+      <div class="app-info">
+        <h1>Phone Finder</h1>
+        <div class="developer">تم التطوير بواسطة خالد طارق</div>
+      </div>
+      <a href="assets/Phone_Finder.apk" download="PhoneFinder.apk">
+        <button class="install-btn">📥 تحميل التطبيق</button>
+      </a>
     </div>
-    <a href="https://drive.google.com/file/d/150T8An23HE4DTOKJAps-bkzmWA36TsOb/view?usp=drive_link" target="_blank">
-      <button class="install-btn">📥 تحميل التطبيق</button>
-    </a>
-  </div>
 
-  <div class="rating-section">
-    ⭐ 4.9 · أكثر من 1,000 مستخدم · Android 5.0 وما فوق
-  </div>
+    <div class="rating-section">
+      ⭐ 4.9 · أكثر من 1,000 مستخدم · Android 5.0 وما فوق
+    </div>
 
-  <div class="description">
-    <p>
-      تطبيق Phone Finder يساعدك في حماية هاتفك من السرقة عن طريق تسجيل رقم IMEI.<br>
-      عند محاولة بيع الهاتف أو فحصه من قبل مستخدم آخر، يتم إرسال تنبيه بالموقع التقريبي وتاريخ العملية.
-    </p>
-  </div>
+    <div class="description">
+      <p>
+        تطبيق Phone Finder يساعدك في حماية هاتفك من السرقة عن طريق تسجيل رقم IMEI.<br>
+        عند محاولة بيع الهاتف أو فحصه من قبل مستخدم آخر، يتم إرسال تنبيه بالموقع التقريبي وتاريخ العملية.
+      </p>
+    </div>
 
-  <div class="features">
-    <h3>مميزات التطبيق</h3>
-    <ul>
-      <li>فحص حالة الهاتف (آمن / مسروق)</li>
-      <li>تسجيل كل عمليات البحث عن هاتفك</li>
-      <li>تنبيهات لحظية بموقع الهاتف</li>
-      <li>واجهة سهلة بالعربية والإنجليزية</li>
-      <li>خطوات ترحيبية جديدة للمستخدمين</li>
-    </ul>
-  </div>
+    <div class="features">
+      <h3>مميزات التطبيق</h3>
+      <ul>
+        <li>فحص حالة الهاتف (آمن / مسروق)</li>
+        <li>تسجيل كل عمليات البحث عن هاتفك</li>
+        <li>تنبيهات لحظية بموقع الهاتف</li>
+        <li>واجهة سهلة بالعربية والإنجليزية</li>
+        <li>خطوات ترحيبية جديدة للمستخدمين</li>
+      </ul>
+    </div>
 
-  <div class="screenshots">
-    <h3>صور التطبيق</h3>
-    <div class="screenshots-grid">
-      <img src="assets/1.png" alt="شاشة 1">
-      <img src="assets/2.png" alt="شاشة 2">
-      <img src="assets/3.png" alt="شاشة 3">
-      <img src="assets/4.png" alt="شاشة 4">
-      <img src="assets/5.png" alt="شاشة 5">
+    <div class="screenshots">
+      <h3>صور التطبيق</h3>
+      <div class="screenshots-grid">
+        <img src="assets/1.png" alt="شاشة 1">
+        <img src="assets/2.png" alt="شاشة 2">
+        <img src="assets/3.png" alt="شاشة 3">
+        <img src="assets/4.png" alt="شاشة 4">
+        <img src="assets/5.png" alt="شاشة 5">
+      </div>
+    </div>
+
+    <div class="contact">
+      <h3>للتواصل</h3>
+      <p>📧 <a href="mailto:dev.khaledtarek@gmail.com">dev.khaledtarek@gmail.com</a></p>
+      <p>💬 <a href="https://wa.me/201273793869" target="_blank">+201273793869</a></p>
+      <p>🔗 <a href="https://www.linkedin.com/in/khaled-tarek-675632241" target="_blank">Khaled Tarek</a></p>
+    </div>
+
+    <div class="footer">
+      © 2025 Phone Finder — تم التطوير بواسطة خالد طارق
     </div>
   </div>
 
-  <div class="contact">
-    <h3>للتواصل</h3>
-    <p>📧 <a href="mailto:dev.khaledtarek@gmail.com">dev.khaledtarek@gmail.com</a></p>
-    <p>💬 <a href="https://wa.me/201273793869" target="_blank">+201273793869</a></p>
-    <p>🔗 <a href="https://www.linkedin.com/in/khaled-tarek-675632241" target="_blank">Khaled Tarek</a></p>
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <img src="" alt="عرض الصورة" />
   </div>
 
-  <div class="footer">
-    © 2025 Phone Finder — تم التطوير بواسطة خالد طارق
-  </div>
-</div>
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = lightbox.querySelector('img');
 
-<!-- Lightbox -->
-<div class="lightbox" id="lightbox">
-  <img src="" alt="عرض الصورة" />
-</div>
-
-<script>
-  const lightbox = document.getElementById('lightbox');
-  const lightboxImg = lightbox.querySelector('img');
-
-  document.querySelectorAll('.screenshots-grid img').forEach(img => {
-    img.addEventListener('click', () => {
-      lightbox.classList.add('visible');
-      lightboxImg.src = img.src;
+    document.querySelectorAll('.screenshots-grid img').forEach(img => {
+      img.addEventListener('click', () => {
+        lightbox.classList.add('visible');
+        lightboxImg.src = img.src;
+      });
     });
-  });
 
-  lightbox.addEventListener('click', () => {
-    lightbox.classList.remove('visible');
-    lightboxImg.src = '';
-  });
-</script>
+    lightbox.addEventListener('click', () => {
+      lightbox.classList.remove('visible');
+      lightboxImg.src = '';
+    });
+  </script>
 
 </body>
+
 </html>
