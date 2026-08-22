@@ -20,29 +20,29 @@ A cross-platform Flutter app to help users register, track, and recover lost or 
 - **Privacy Policy & Terms of Use:** Comprehensive legal documents accessible from login, register, and profile screens.
 
 ---
+![App Icon](icon.png)
 
-📸 Screenshots
-🚀 Onboarding
+## 📸 Screenshots
 
-<p align="center"> <img src="screens/onboarding1.png" width="250"/> <img src="screens/onboarding2.png" width="250"/> <img src="screens/onboarding3.png" width="250"/> </p>
+| Home Screen | Features |
+|---|---|
+| ![Screenshot 1](assets/1.png) | ![Screenshot 2](assets/2.png) |
 
-🔐 Authentication
+| Tracking View | Settings |
+|---|---|
+| ![Screenshot 3](assets/3.png) | ![Screenshot 4](assets/4.png) |
 
-<p align="center"> <img src="screens/login.png" width="250"/> <img src="screens/register.png" width="250"/> <img src="screens/forget_password.png" width="250"/> </p>
+| Alert Screen |
+|---|
+| ![Screenshot 5](assets/5.png) |
 
-🏠 Home & Search
+## 📲 Download
 
-<p align="center"> <img src="screens/home.png" width="250"/> <img src="screens/search.png" width="250"/> <img src="screens/notification.png" width="250"/> </p>
+| Platform | Download Link |
+|---|---|
+| **Android APK** | [Download Phone_Finder.apk](Phone_Finder.apk) |
 
-📱 Device Management
-
-<p align="center"> <img src="screens/add_device.png" width="250"/> <img src="screens/device_details.png" width="250"/> <img src="screens/my_device_details.png" width="250"/> </p>
-
-👤 Profile & Other Screens
-
-<p align="center"> <img src="screens/profile.png" width="250"/> <img src="screens/using.png" width="250"/> <img src="screens/linces.png" width="250"/> </p>
 ---
-
 ## 🛠️ Getting Started
 
 ### Prerequisites
