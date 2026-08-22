@@ -1,4 +1,5 @@
 https://3khaled3.github.io/find_my_phone_landing/
+<img src="assets/icon.png" width="70" alt="Find My Phone App Icon">
 # Find My Phone
 
 A cross-platform Flutter app to help users register, track, and recover lost or stolen mobile devices using their IMEI number. The app leverages Firebase for authentication, data storage, push notifications, and analytics, and supports both English and Arabic languages.
@@ -20,7 +21,6 @@ A cross-platform Flutter app to help users register, track, and recover lost or 
 - **Privacy Policy & Terms of Use:** Comprehensive legal documents accessible from login, register, and profile screens.
 
 ---
-![App Icon](assets/icon.png)
 
 ## 📸 Screenshots
 
