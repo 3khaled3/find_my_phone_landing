@@ -52,32 +52,6 @@ A cross-platform Flutter app to help users register, track, and recover lost or 
 | **Android APK** | [Download Phone_Finder.apk](Phone_Finder.apk) |
 
 ---
-## 🛠️ Getting Started
-
-### Prerequisites
-- [Flutter SDK](https://flutter.dev/docs/get-started/install)
-- [Firebase CLI](https://firebase.google.com/docs/cli)
-- Android Studio / Xcode / VS Code
-
-### Setup
-1. **Clone the repository:**
-   ```bash
-   git clone <repo-url>
-   cd find_my_phone
-   ```
-2. **Install dependencies:**
-   ```bash
-   flutter pub get
-   ```
-3. **Firebase Setup:**
-   - Add your `google-services.json` (Android) and `GoogleService-Info.plist` (iOS) to the respective folders if not already present.
-   - Update Firebase project settings as needed.
-4. **Run the app:**
-   ```bash
-   flutter run
-   ```
-
----
 
 ## 📂 Project Structure
 
@@ -114,12 +88,3 @@ A cross-platform Flutter app to help users register, track, and recover lost or 
   - Registration screen (bottom links)
   - Profile screen (dedicated buttons)
 
----
-
-## 🤝 Contributing
-Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
-
----
-
-## 📄 License
-[MIT](LICENSE) 
