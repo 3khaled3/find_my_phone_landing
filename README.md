@@ -20,7 +20,7 @@ A cross-platform Flutter app to help users register, track, and recover lost or 
 - **Privacy Policy & Terms of Use:** Comprehensive legal documents accessible from login, register, and profile screens.
 
 ---
-![App Icon](icon.png)
+![App Icon](assets/icon.png)
 
 ## 📸 Screenshots
 
